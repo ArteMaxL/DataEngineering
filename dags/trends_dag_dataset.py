@@ -16,6 +16,7 @@ default_args = {
 
 dag = DAG('insert_google_trends_to_redshift', default_args=default_args, schedule_interval='@daily')
 dag_path = os.getcwd()
+print(dag_path)
 
 def fetch_google_trends_data():
     csv_directory = dag_path + "/ext/" + "candidatos.csv"
